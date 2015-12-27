@@ -6,12 +6,16 @@
 ## accepts a matrix, and can be used to set/get the inverted matrix.
 makeCacheMatrix <- function(x = matrix()) {
         inver <- NULL
+        ## initializes the function 
         set <- function(y) {
                 x <<- y
                 inver <<- NULL
         }
+        ## returns the initialized matrix
         get <- function() x
+        ## set the inverted matrix
         setinver <- function(inverse) inver <<- inverse
+        ## returns the inverted matrix
         getinver <- function() inver
         list(set = set, get = get,
              setinver = setinver,
